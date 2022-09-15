@@ -8,7 +8,7 @@ const Navbar = () => {
     const Logout = async () => {
         try {
             await axios.delete('http://localhost:5000/logout');
-            history.push("/");
+            history("/");
         } catch (error) {
             console.log(error);
         }

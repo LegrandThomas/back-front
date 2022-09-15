@@ -15,6 +15,7 @@ const Dashboard = () => {
         refreshToken();
         getUsers();
     }, []);
+
  
     const refreshToken = async () => {
         try {
@@ -25,7 +26,7 @@ const Dashboard = () => {
             setExpire(decoded.exp);
         } catch (error) {
             if (error.response) {
-                history.push("/");
+                history("/");
             }
         }
     }

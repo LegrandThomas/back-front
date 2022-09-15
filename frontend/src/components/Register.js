@@ -19,7 +19,7 @@ const Register = () => {
                 password: password,
                 confPassword: confPassword
             });
-            history.push("/");
+            history("/");
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
